@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Challenge 2 - App de Adoção',
       theme: CustomTheme.theme,
-      // home:
+      //home:
     );
   }
 }
