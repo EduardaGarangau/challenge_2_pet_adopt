@@ -9,11 +9,9 @@ import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/dog_like_butto
 
 class DogCard extends StatelessWidget {
   final PetModel pet;
-  final bool isLiked;
 
   const DogCard({
     required this.pet,
-    required this.isLiked,
     super.key,
   });
 
@@ -44,7 +42,7 @@ class DogCard extends StatelessWidget {
               genderAndYear: pet.genderAndAgeText,
             ),
             const SizedBox(width: 100),
-            DogLikeButton(isLiked: isLiked),
+            DogLikeButton(isLiked: pet.isLiked),
           ],
         ),
       ),

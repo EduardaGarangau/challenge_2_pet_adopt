@@ -13,6 +13,7 @@ class PetModel {
   final String image;
   final String imageWithoutBG;
   final List<String> images;
+  final bool isLiked;
 
   PetModel({
     required this.name,
@@ -24,6 +25,7 @@ class PetModel {
     required this.image,
     required this.imageWithoutBG,
     required this.images,
+    required this.isLiked,
   });
 
   String get distanceText => '$distance kms away';

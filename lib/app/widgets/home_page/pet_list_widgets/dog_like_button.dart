@@ -17,6 +17,7 @@ class DogLikeButton extends StatelessWidget {
       children: [
         Icon(
           isLiked ? CupertinoIcons.heart_fill : CupertinoIcons.heart,
+          size: 30,
           color: isLiked ? const Color.fromRGBO(255, 95, 80, 1) : Colors.grey,
         ),
       ],

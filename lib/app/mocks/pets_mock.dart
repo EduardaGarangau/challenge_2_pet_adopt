@@ -19,6 +19,7 @@ class PetsMock {
         'assets/images/dogs_images/golden/golden_4.png',
         'assets/images/dogs_images/golden/golden_5.png',
       ],
+      isLiked: true,
     ),
     PetModel(
       name: 'Daisy',
@@ -37,6 +38,7 @@ class PetsMock {
         'assets/images/dogs_images/pug/pug_4.png',
         'assets/images/dogs_images/pug/pug_5.png',
       ],
+      isLiked: false,
     ),
     PetModel(
       name: 'Max',
@@ -54,18 +56,7 @@ class PetsMock {
         'assets/images/dogs_images/spitz/spitz_3.png',
         'assets/images/dogs_images/spitz/spitz_4.png',
       ],
-    ),
-    PetModel(
-      name: 'Charlie',
-      breed: 'Bulldog Francês',
-      gender: Gender.male,
-      age: '1.5 years',
-      distance: 2.6,
-      description:
-          'He is shy at first, but will warm up when he\'s comfortable. He is not a ranch dog that guards animals and property as he whould rather be with his people; but he is comfortable around animals. He plays well with other dogs.',
-      image: 'assets/images/home_images/bulldog_home.png',
-      imageWithoutBG: 'assets/images/dogs_images/bulldog/bulldog_bg.png',
-      images: [],
+      isLiked: false,
     ),
     PetModel(
       name: 'Zoe',
@@ -78,6 +69,7 @@ class PetsMock {
       image: 'assets/images/home_images/chihuahua_home.png',
       imageWithoutBG: 'assets/images/dogs_images/chihuahua/chihuahua_bg.png',
       images: [],
+      isLiked: false,
     ),
     PetModel(
       name: 'Bob',
@@ -90,6 +82,7 @@ class PetsMock {
       image: 'assets/images/home_images/beagle_home.png',
       imageWithoutBG: 'assets/images/dogs_images/beagle/beagle_bg.png',
       images: [],
+      isLiked: true,
     ),
   ];
 }
