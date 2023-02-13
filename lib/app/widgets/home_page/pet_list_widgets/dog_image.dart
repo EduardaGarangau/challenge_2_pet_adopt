@@ -15,7 +15,10 @@ class DogImage extends StatelessWidget {
       height: 120,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
-        child: Image.asset(petImage),
+        child: Image.asset(
+          petImage,
+          fit: BoxFit.cover,
+        ),
       ),
     );
   }
