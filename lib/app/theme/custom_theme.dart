@@ -6,8 +6,10 @@ class CustomTheme {
   static ThemeData theme = ThemeData(
     appBarTheme: const AppBarTheme(
       backgroundColor: Colors.white,
+      centerTitle: true,
+      elevation: 0,
     ),
-    scaffoldBackgroundColor: const Color.fromRGBO(242, 242, 242, 1),
+    scaffoldBackgroundColor: Colors.white,
     elevatedButtonTheme: ElevatedButtonThemeData(
       style: ElevatedButton.styleFrom(
         backgroundColor: const Color.fromRGBO(255, 95, 80, 1),
@@ -24,7 +26,7 @@ class CustomTheme {
       headline2: TextStyle(
         //About da segunda página e Nome dos Pets na primeira página
         color: Colors.black,
-        fontSize: 18,
+        fontSize: 20,
         fontWeight: FontWeight.w800,
         fontFamily: 'Inter',
       ),
@@ -44,14 +46,15 @@ class CustomTheme {
       headline5: TextStyle(
         // Raça na primeira página
         color: Colors.black,
-        fontSize: 10,
+        fontSize: 12,
         fontFamily: 'Inter',
       ),
       headline6: TextStyle(
         // idade e genero primeira página
-        color: Color.fromRGBO(242, 242, 242, 1),
-        fontSize: 8,
+        color: Colors.grey,
+        fontSize: 12,
         fontFamily: 'Inter',
+        fontWeight: FontWeight.w400,
       ),
     ),
   );
