@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pets_adopt/app/models/pet_model.dart';
-import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/dog_card.dart';
+import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/pet_card_widget.dart';
 
-class PetList extends StatelessWidget {
+class PetListWidget extends StatelessWidget {
   final List<PetModel> pets;
 
-  const PetList({
+  const PetListWidget({
     required this.pets,
     super.key,
   });
@@ -24,7 +24,7 @@ class PetList extends StatelessWidget {
               right: 24,
               bottom: 20,
             ),
-            child: DogCard(
+            child: PetCardWidget(
               pet: pets[index],
             ),
           );

@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 
-class DogImage extends StatelessWidget {
+class PetImageWidget extends StatelessWidget {
   final String petImage;
 
-  const DogImage({
+  const PetImageWidget({
     required this.petImage,
     super.key,
   });

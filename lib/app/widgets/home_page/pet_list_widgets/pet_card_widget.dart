@@ -3,14 +3,14 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pets_adopt/app/models/pet_model.dart';
-import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/dog_image.dart';
-import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/dog_info.dart';
-import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/dog_like_button.dart';
+import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/pet_image_widget.dart';
+import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/pet_info_widget.dart';
+import 'package:pets_adopt/app/widgets/home_page/pet_list_widgets/pet_like_button_widget.dart';
 
-class DogCard extends StatelessWidget {
+class PetCardWidget extends StatelessWidget {
   final PetModel pet;
 
-  const DogCard({
+  const PetCardWidget({
     required this.pet,
     super.key,
   });
@@ -34,15 +34,15 @@ class DogCard extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            DogImage(petImage: pet.image),
-            DogInfo(
+            PetImageWidget(petImage: pet.image),
+            PetInfoWidget(
               petName: pet.name,
               petBreed: pet.breed,
               distance: pet.distanceText,
               genderAndYear: pet.genderAndAgeText,
             ),
             const SizedBox(width: 100),
-            DogLikeButton(isLiked: pet.isLiked),
+            PetLikeButtonWidget(isLiked: pet.isLiked),
           ],
         ),
       ),

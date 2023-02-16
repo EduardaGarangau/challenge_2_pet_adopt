@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 
-class HomeFilterButton extends StatelessWidget {
+class FilterButtonWidget extends StatelessWidget {
   final String iconImage;
-  final String filterTitle;
+  final String? filterTitle;
   final Color buttonColor;
   final Color textColor;
-  final bool hasText;
 
-  const HomeFilterButton({
+  const FilterButtonWidget({
     required this.iconImage,
     required this.filterTitle,
     required this.buttonColor,
     required this.textColor,
-    required this.hasText,
     super.key,
   });
 
@@ -25,7 +23,9 @@ class HomeFilterButton extends StatelessWidget {
       ),
       child: Container(
         height: 50,
-        width: hasText ? 100 : 50,
+        width: filterTitle != null
+            ? 70.0 + (filterTitle!.length + iconImage.length)
+            : 50,
         decoration: BoxDecoration(
           color: buttonColor,
           borderRadius: const BorderRadius.all(
@@ -39,10 +39,10 @@ class HomeFilterButton extends StatelessWidget {
               iconImage,
               height: 30,
             ),
-            if (hasText) const SizedBox(width: 5),
-            if (hasText)
+            if (filterTitle != null) ...{
+              const SizedBox(width: 5),
               Text(
-                filterTitle,
+                filterTitle!,
                 style: TextStyle(
                   color: textColor,
                   fontFamily: 'Inter',
@@ -50,6 +50,7 @@ class HomeFilterButton extends StatelessWidget {
                   fontWeight: FontWeight.bold,
                 ),
               ),
+            }
           ],
         ),
       ),

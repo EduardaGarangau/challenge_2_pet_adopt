@@ -2,13 +2,13 @@
 
 import 'package:flutter/material.dart';
 
-class DogInfo extends StatelessWidget {
+class PetInfoWidget extends StatelessWidget {
   final String petName;
   final String petBreed;
   final String distance;
   final String genderAndYear;
 
-  const DogInfo({
+  const PetInfoWidget({
     required this.petName,
     required this.petBreed,
     required this.distance,
@@ -18,23 +18,30 @@ class DogInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).textTheme;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         const SizedBox(height: 10),
         Text(
           petName,
-          style: Theme.of(context).textTheme.headline2,
+          style: theme.headline6,
         ),
         const SizedBox(height: 7),
         Text(
           petBreed,
-          style: Theme.of(context).textTheme.headline5,
+          style: const TextStyle(
+            fontWeight: FontWeight.w500,
+            color: Colors.black,
+            fontSize: 12,
+            fontFamily: 'Inter',
+          ),
         ),
         const SizedBox(height: 5),
         Text(
           genderAndYear,
-          style: Theme.of(context).textTheme.headline6,
+          style: theme.caption,
         ),
         const SizedBox(height: 20),
         Row(
@@ -45,7 +52,7 @@ class DogInfo extends StatelessWidget {
             ),
             Text(
               distance,
-              style: Theme.of(context).textTheme.headline6,
+              style: theme.caption,
             ),
           ],
         ),

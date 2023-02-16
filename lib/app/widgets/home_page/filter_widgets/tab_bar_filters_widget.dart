@@ -1,46 +1,46 @@
 import 'package:flutter/material.dart';
-import 'home_filter_button.dart';
+import 'package:pets_adopt/app/shared/app_images.dart';
+import 'filter_button_widget.dart';
 
-class TabBarFilters extends StatelessWidget {
-  const TabBarFilters({super.key});
+class TabBarFiltersWidget extends StatelessWidget {
+  const TabBarFiltersWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 30.0),
       height: 50,
-      child: Center(
+      child: Padding(
+        padding: const EdgeInsets.only(
+          left: 25,
+        ),
         child: ListView(
           shrinkWrap: true,
           scrollDirection: Axis.horizontal,
           children: const [
-            HomeFilterButton(
-              iconImage: 'assets/images/icons/filter_icon.PNG',
-              filterTitle: '',
+            FilterButtonWidget(
+              iconImage: AppImages.filterIconImage,
+              filterTitle: null,
               buttonColor: Colors.white,
               textColor: Colors.black,
-              hasText: false,
             ),
-            HomeFilterButton(
-              iconImage: 'assets/images/icons/dog_icon.png',
+            FilterButtonWidget(
+              iconImage: AppImages.filterDogsIconImage,
               filterTitle: 'Dogs',
               buttonColor: Color.fromRGBO(255, 95, 80, 1),
               textColor: Colors.white,
-              hasText: true,
             ),
-            HomeFilterButton(
-              iconImage: 'assets/images/icons/cat_icon.png',
+            FilterButtonWidget(
+              iconImage: AppImages.filterCatsIconImage,
               filterTitle: 'Cats',
               buttonColor: Colors.white,
               textColor: Colors.black,
-              hasText: true,
             ),
-            HomeFilterButton(
-              iconImage: 'assets/images/icons/bird_icon.png',
-              filterTitle: 'Birds',
+            FilterButtonWidget(
+              iconImage: AppImages.filterBirdsIconImage,
+              filterTitle: 'Crocodilo',
               buttonColor: Colors.white,
               textColor: Colors.black,
-              hasText: true,
             ),
           ],
         ),

@@ -2,16 +2,18 @@
 
 import 'package:flutter/material.dart';
 
-class LocationTextAppBar extends StatelessWidget {
-  const LocationTextAppBar({super.key});
+class LocationTextAppBarWidget extends StatelessWidget {
+  const LocationTextAppBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context).textTheme;
+
     return Column(
       children: [
         Text(
           'Location',
-          style: Theme.of(context).textTheme.headline6,
+          style: theme.caption,
         ),
         const SizedBox(height: 3),
         const Text(

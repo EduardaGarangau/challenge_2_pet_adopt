@@ -24,38 +24,13 @@ flutter:
   uses-material-design: true
 
   assets:
-    - assets/images/home_images/beagle_home.png
-    - assets/images/home_images/chihuahua_home.png
-    - assets/images/home_images/golden_home.png
-    - assets/images/home_images/pug_home.png
-    - assets/images/home_images/spitz_home.png
-    - assets/images/dogs_images/golden/golden_bg.png
-    - assets/images/dogs_images/golden/golden_1.png
-    - assets/images/dogs_images/golden/golden_2.png
-    - assets/images/dogs_images/golden/golden_3.png
-    - assets/images/dogs_images/golden/golden_4.png
-    - assets/images/dogs_images/golden/golden_5.png
-    - assets/images/dogs_images/pug/pug_bg.png
-    - assets/images/dogs_images/pug/pug_1.png
-    - assets/images/dogs_images/pug/pug_2.png
-    - assets/images/dogs_images/pug/pug_3.png
-    - assets/images/dogs_images/pug/pug_4.png
-    - assets/images/dogs_images/pug/pug_5.png
-    - assets/images/dogs_images/spitz/spitz_bg.png
-    - assets/images/dogs_images/spitz/spitz_1.jpg
-    - assets/images/dogs_images/spitz/spitz_2.png
-    - assets/images/dogs_images/spitz/spitz_3.png
-    - assets/images/dogs_images/spitz/spitz_4.png
-    - assets/images/dogs_images/beagle/beagle_bg.png
-    - assets/images/dogs_images/chihuahua/chihuahua_bg.png
-    - assets/images/icons/bird_icon.png
-    - assets/images/icons/cat_icon.png
-    - assets/images/icons/dog_icon.png
-    - assets/images/icons/female_icon.png
-    - assets/images/icons/male_icon.png
-    - assets/images/icons/menu_icon.png
-    - assets/images/icons/filter_icon.PNG
-    - assets/images/home_images/person.jpg
+    - assets/images/home_images/
+    - assets/images/dogs_images/golden/
+    - assets/images/dogs_images/pug/
+    - assets/images/dogs_images/spitz/
+    - assets/images/dogs_images/beagle/
+    - assets/images/dogs_images/chihuahua/
+    - assets/images/icons/
 
   fonts:
     - family: Inter

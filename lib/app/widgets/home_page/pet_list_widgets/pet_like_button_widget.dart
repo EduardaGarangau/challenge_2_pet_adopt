@@ -1,10 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DogLikeButton extends StatelessWidget {
+class PetLikeButtonWidget extends StatelessWidget {
   final bool isLiked;
 
-  const DogLikeButton({
+  const PetLikeButtonWidget({
     required this.isLiked,
     super.key,
   });

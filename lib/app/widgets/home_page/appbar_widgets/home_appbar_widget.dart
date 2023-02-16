@@ -1,11 +1,10 @@
 import 'package:flutter/material.dart';
+import 'avatar_appbar_widget.dart';
+import 'location_text_appbar_widget.dart';
+import 'menu_icon_appbar_widget.dart';
 
-import 'avatar_appbar.dart';
-import 'location_text_appbar.dart';
-import 'menu_icon_appbar.dart';
-
-class HomeAppBar extends StatelessWidget {
-  const HomeAppBar({super.key});
+class HomeAppBarWidget extends StatelessWidget {
+  const HomeAppBarWidget({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -16,9 +15,9 @@ class HomeAppBar extends StatelessWidget {
       title: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: const [
-          MenuIconAppBar(),
-          LocationTextAppBar(),
-          AvatarAppBar(),
+          MenuIconAppBarWidget(),
+          LocationTextAppBarWidget(),
+          AvatarAppBarWidget(),
         ],
       ),
     );
