@@ -38,7 +38,7 @@ class TabBarFiltersWidget extends StatelessWidget {
             ),
             FilterButtonWidget(
               iconImage: AppImages.filterBirdsIconImage,
-              filterTitle: 'Crocodilo',
+              filterTitle: 'Birds',
               buttonColor: Colors.white,
               textColor: Colors.black,
             ),
