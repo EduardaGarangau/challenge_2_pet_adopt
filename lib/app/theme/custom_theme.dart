@@ -16,29 +16,31 @@ class CustomTheme {
       ),
     ),
     textTheme: const TextTheme(
+      headline4: TextStyle(
+        color: Color.fromRGBO(42, 41, 39, 1),
+        fontWeight: FontWeight.w600,
+        fontSize: 30,
+        fontFamily: 'Inter',
+      ),
       headline5: TextStyle(
-        //Segunda página nome do Pet
-        color: Colors.black,
+        color: Color.fromRGBO(42, 41, 39, 1),
         fontSize: 25,
         fontWeight: FontWeight.w500,
         fontFamily: 'Inter',
       ),
       headline6: TextStyle(
-        //About da segunda página e Nome dos Pets na primeira página
-        color: Colors.black,
+        color: Color.fromRGBO(42, 41, 39, 1),
         fontSize: 20,
         fontWeight: FontWeight.bold,
         fontFamily: 'Inter',
       ),
       bodyText2: TextStyle(
-        // Endereço na primeira pagina e idade, raça segunda pagina
         color: Colors.black,
         fontSize: 14,
         fontWeight: FontWeight.w500,
         fontFamily: 'Inter',
       ),
       caption: TextStyle(
-        // idade e genero primeira página
         color: Colors.grey,
         fontSize: 12,
         fontFamily: 'Inter',
