@@ -13,20 +13,26 @@ class InfoHeaderWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        NameAndBreedTitleWidget(
-          name: pet.name,
-          breed: pet.breed,
-          distance: pet.distanceText,
-        ),
-        GenderAndAgeTextWidget(
-          gender: pet.gender,
-          age: pet.age,
-        ),
-      ],
+    return Container(
+      margin: const EdgeInsets.only(
+        left: 25,
+        right: 30,
+      ),
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          NameAndBreedTitleWidget(
+            name: pet.name,
+            breed: pet.breed,
+            distance: pet.distanceText,
+          ),
+          GenderAndAgeTextWidget(
+            gender: pet.gender,
+            age: pet.age,
+          ),
+        ],
+      ),
     );
   }
 }

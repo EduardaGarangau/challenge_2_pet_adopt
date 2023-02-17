@@ -17,21 +17,32 @@ class NameAndBreedTitleWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
       children: [
-        Text(
-          name,
-          style: Theme.of(context).textTheme.headline4,
+        Row(
+          children: [
+            const SizedBox(width: 4),
+            Text(
+              name,
+              style: Theme.of(context).textTheme.headline4,
+            ),
+          ],
         ),
         const SizedBox(height: 10),
-        Text(
-          breed,
-          style: const TextStyle(
-            color: Colors.black,
-            fontSize: 13,
-            fontWeight: FontWeight.w500,
-            fontFamily: 'Inter',
-          ),
+        Row(
+          children: [
+            const SizedBox(width: 5),
+            Text(
+              breed,
+              style: const TextStyle(
+                color: Colors.black,
+                fontSize: 13,
+                fontWeight: FontWeight.w500,
+                fontFamily: 'Inter',
+              ),
+            ),
+          ],
         ),
         const SizedBox(height: 8),
         Row(
@@ -40,7 +51,7 @@ class NameAndBreedTitleWidget extends StatelessWidget {
               Icons.location_pin,
               color: Color.fromRGBO(255, 95, 80, 1),
             ),
-            const SizedBox(width: 3),
+            const SizedBox(width: 2),
             Text(
               distance,
               style: const TextStyle(

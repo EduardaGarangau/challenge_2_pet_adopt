@@ -23,9 +23,10 @@ class PetCardWidget extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-              builder: (context) => DetailsPage(
-                    pet: pet,
-                  )),
+            builder: (context) => DetailsPage(
+              pet: pet,
+            ),
+          ),
         );
       },
       child: Container(
