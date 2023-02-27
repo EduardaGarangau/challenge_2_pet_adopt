@@ -6,9 +6,11 @@ class MenuIconAppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imageHeight = MediaQuery.of(context).size.height * 0.035;
+
     return Image.asset(
       AppImages.menuIconAppBarImage,
-      height: 28,
+      height: imageHeight,
     );
   }
 }

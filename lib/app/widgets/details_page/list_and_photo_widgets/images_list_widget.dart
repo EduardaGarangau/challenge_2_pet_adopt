@@ -11,11 +11,14 @@ class ImagesListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final listWidth = MediaQuery.of(context).size.width * 0.14;
+    final listHeight = MediaQuery.of(context).size.height * 0.385;
+
     return Stack(
       children: [
         SizedBox(
-          width: 70,
-          height: 300,
+          width: listWidth,
+          height: listHeight,
           child: Center(
             child: ListView.builder(
               itemCount: petImages.length,
@@ -27,8 +30,8 @@ class ImagesListWidget extends StatelessWidget {
         ),
         IgnorePointer(
           child: Container(
-            width: 70,
-            height: 300,
+            width: listWidth,
+            height: listHeight,
             decoration: BoxDecoration(
               gradient: LinearGradient(
                 begin: Alignment.topCenter,

@@ -18,6 +18,9 @@ class PetCardWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cardWidth = MediaQuery.of(context).size.width * 0.88;
+    final cardHeight = MediaQuery.of(context).size.height * 0.192;
+
     return InkWell(
       onTap: () {
         Navigator.push(
@@ -30,8 +33,8 @@ class PetCardWidget extends StatelessWidget {
         );
       },
       child: Container(
-        width: 440,
-        height: 150,
+        width: cardWidth,
+        height: cardHeight,
         decoration: BoxDecoration(
           color: Colors.white,
           borderRadius: BorderRadius.circular(20),
@@ -47,14 +50,16 @@ class PetCardWidget extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               PetImageWidget(petImage: pet.image),
+              const SizedBox(width: 13),
               PetInfoWidget(
                 petName: pet.name,
                 petBreed: pet.breed,
                 distance: pet.distanceText,
                 genderAndYear: pet.genderAndAgeText,
               ),
-              const SizedBox(width: 100),
-              PetLikeButtonWidget(isLiked: pet.isLiked),
+              Expanded(
+                child: PetLikeButtonWidget(isLiked: pet.isLiked),
+              ),
             ],
           ),
         ),

@@ -14,12 +14,15 @@ class ListAndPhotoWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final listAndPhotoHeight = MediaQuery.of(context).size.height * 0.513;
+
     return Container(
       margin: const EdgeInsets.only(
         left: 35,
       ),
-      height: 400,
-      width: double.infinity,
+      height: listAndPhotoHeight,
+      width: screenWidth,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [

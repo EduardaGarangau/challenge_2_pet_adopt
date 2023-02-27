@@ -6,15 +6,18 @@ class AdoptButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final buttonHeight = MediaQuery.of(context).size.height * 0.085;
+    final buttonWidth = MediaQuery.of(context).size.width * 0.4;
+
     return SizedBox(
-      height: 65,
+      height: buttonHeight,
       width: double.infinity,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(
-            height: 65,
-            width: 200,
+            height: buttonHeight,
+            width: buttonWidth,
             decoration: const BoxDecoration(
               borderRadius: BorderRadius.only(
                 topLeft: Radius.circular(40),

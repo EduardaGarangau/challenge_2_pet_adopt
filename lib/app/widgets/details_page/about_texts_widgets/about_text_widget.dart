@@ -13,10 +13,12 @@ class AboutTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).textTheme;
+    final containerHeight = MediaQuery.of(context).size.height * 0.166;
+    final containerWidth = MediaQuery.of(context).size.width;
 
     return Container(
-      height: 130,
-      width: double.infinity,
+      height: containerHeight,
+      width: containerWidth,
       margin: const EdgeInsets.only(
         left: 25,
         right: 30,

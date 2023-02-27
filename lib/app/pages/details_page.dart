@@ -22,9 +22,12 @@ class DetailsPage extends StatefulWidget {
 class _DetailsPageState extends State<DetailsPage> {
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+    final appBarHeight = MediaQuery.of(context).size.height * 0.115;
+
     return Scaffold(
       appBar: AppBar(
-        toolbarHeight: 90,
+        toolbarHeight: appBarHeight,
         leading: const BackPageButtonWidget(),
         title: Row(
           mainAxisAlignment: MainAxisAlignment.end,
@@ -34,7 +37,7 @@ class _DetailsPageState extends State<DetailsPage> {
         ),
       ),
       body: SizedBox(
-        width: double.infinity,
+        width: screenWidth,
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
