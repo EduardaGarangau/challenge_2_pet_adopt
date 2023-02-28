@@ -14,15 +14,20 @@ class GenderAndAgeTextWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context).size;
+    final genderHeight = mediaQuery.height * 0.014;
+    final genderImageHeight = mediaQuery.height * 0.032;
+    final ageHeight = mediaQuery.height * 0.012;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.end,
       children: [
-        const SizedBox(height: 11),
+        SizedBox(height: genderHeight),
         Image.asset(
           AppImages.genderIconImage,
-          height: 25,
+          height: genderImageHeight,
         ),
-        const SizedBox(height: 10),
+        SizedBox(height: ageHeight),
         Text(
           '$age old',
           style: const TextStyle(

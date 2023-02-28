@@ -7,19 +7,19 @@ class TextButtonWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
-      children: const [
-        Icon(
+      children: [
+        const Icon(
           Icons.pets_rounded,
           color: Colors.white,
         ),
-        SizedBox(width: 10),
+        const SizedBox(width: 10),
         Text(
           'ADOPT',
           style: TextStyle(
             fontFamily: 'Inter',
             color: Colors.white,
             fontWeight: FontWeight.w500,
-            fontSize: 16,
+            fontSize: 16 * MediaQuery.of(context).textScaleFactor,
           ),
         ),
       ],

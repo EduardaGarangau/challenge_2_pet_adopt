@@ -6,13 +6,14 @@ class AdoptButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final buttonHeight = MediaQuery.of(context).size.height * 0.085;
+    final buttonHeight = MediaQuery.of(context).size.height * 0.080;
     final buttonWidth = MediaQuery.of(context).size.width * 0.4;
 
     return SizedBox(
       height: buttonHeight,
       width: double.infinity,
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.end,
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Container(

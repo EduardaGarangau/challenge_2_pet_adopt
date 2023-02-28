@@ -10,9 +10,12 @@ class PetImageWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imageHeight = MediaQuery.of(context).size.height * 0.154;
+    final imageWidth = MediaQuery.of(context).size.width * 0.24;
+
     return SizedBox(
-      width: 120,
-      height: 120,
+      width: imageWidth,
+      height: imageHeight,
       child: ClipRRect(
         borderRadius: BorderRadius.circular(20),
         child: Image.asset(

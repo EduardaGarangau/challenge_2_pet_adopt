@@ -19,16 +19,21 @@ class PetInfoWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).textTheme;
+    final mediaQuery = MediaQuery.of(context).size;
+    final nameHeight = mediaQuery.height * 0.012;
+    final breedHeight = mediaQuery.height * 0.009;
+    final genderAndAgeHeight = mediaQuery.height * 0.006;
+    final locationHeight = mediaQuery.height * 0.02;
 
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const SizedBox(height: 10),
+        SizedBox(height: nameHeight),
         Text(
           petName,
           style: theme.headline6,
         ),
-        const SizedBox(height: 7),
+        SizedBox(height: breedHeight),
         Text(
           petBreed,
           style: const TextStyle(
@@ -38,12 +43,12 @@ class PetInfoWidget extends StatelessWidget {
             fontFamily: 'Inter',
           ),
         ),
-        const SizedBox(height: 5),
+        SizedBox(height: genderAndAgeHeight),
         Text(
           genderAndYear,
           style: theme.caption,
         ),
-        const SizedBox(height: 20),
+        SizedBox(height: locationHeight),
         Row(
           children: [
             const Icon(
