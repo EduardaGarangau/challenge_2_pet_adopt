@@ -8,8 +8,10 @@ class HomeAppBarWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final appBarHeight = MediaQuery.of(context).size.height * 0.116;
+
     return SliverAppBar(
-      toolbarHeight: 90,
+      toolbarHeight: appBarHeight,
       floating: true,
       elevation: 0,
       title: Row(

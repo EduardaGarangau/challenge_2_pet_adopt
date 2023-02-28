@@ -7,9 +7,11 @@ class TabBarFiltersWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final containerHeight = MediaQuery.of(context).size.height * 0.064;
+
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 30.0),
-      height: 50,
+      height: containerHeight,
       child: Padding(
         padding: const EdgeInsets.only(
           left: 25,

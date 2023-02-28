@@ -13,10 +13,14 @@ class AboutTextWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final theme = Theme.of(context).textTheme;
+    final mediaQuery = MediaQuery.of(context).size;
+    final containerHeight = mediaQuery.height * 0.166;
+    final containerWidth = mediaQuery.width;
+    final textHeight = mediaQuery.height * 0.002;
 
     return Container(
-      height: 130,
-      width: double.infinity,
+      height: containerHeight,
+      width: containerWidth,
       margin: const EdgeInsets.only(
         left: 25,
         right: 30,
@@ -31,10 +35,10 @@ class AboutTextWidget extends StatelessWidget {
           ),
           Text(
             petDescription,
-            style: const TextStyle(
+            style: TextStyle(
               color: Colors.grey,
-              height: 2,
-              fontSize: 13,
+              height: textHeight,
+              fontSize: 13 * MediaQuery.of(context).textScaleFactor,
               fontFamily: 'Inter',
               fontWeight: FontWeight.w400,
             ),

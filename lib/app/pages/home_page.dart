@@ -16,13 +16,15 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final screenWidth = MediaQuery.of(context).size.width;
+
     return Scaffold(
       body: CustomScrollView(
         slivers: [
           const HomeAppBarWidget(),
           SliverToBoxAdapter(
             child: Container(
-              width: double.infinity,
+              width: screenWidth,
               decoration: const BoxDecoration(
                 color: Color.fromRGBO(242, 242, 242, 1),
                 borderRadius: BorderRadius.vertical(

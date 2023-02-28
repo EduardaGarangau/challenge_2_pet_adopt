@@ -10,13 +10,16 @@ class ImageCardListWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final imageWidth = MediaQuery.of(context).size.width * 0.14;
+    final imageHeight = MediaQuery.of(context).size.height * 0.089;
+
     return Padding(
       padding: const EdgeInsets.only(
         bottom: 20,
       ),
       child: Container(
-        width: 70,
-        height: 70,
+        width: imageWidth,
+        height: imageHeight,
         decoration: BoxDecoration(
           border: Border.all(
             color: Colors.grey.shade300,

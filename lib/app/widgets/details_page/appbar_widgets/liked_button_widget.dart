@@ -11,6 +11,10 @@ class LikedButtonWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context).size;
+    final containerImageHeight = mediaQuery.height * 0.051;
+    final containerImageWidth = mediaQuery.width * 0.08;
+
     return Padding(
       padding: const EdgeInsets.only(
         right: 10,
@@ -18,8 +22,8 @@ class LikedButtonWidget extends StatelessWidget {
         bottom: 10,
       ),
       child: Container(
-        height: 40,
-        width: 40,
+        height: containerImageHeight,
+        width: containerImageWidth,
         decoration: BoxDecoration(
           color: const Color.fromRGBO(255, 230, 227, 1),
           borderRadius: BorderRadius.circular(12),

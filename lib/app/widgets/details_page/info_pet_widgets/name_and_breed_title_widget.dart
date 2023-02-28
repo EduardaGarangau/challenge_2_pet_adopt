@@ -16,6 +16,10 @@ class NameAndBreedTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context).size;
+    final breedHeight = mediaQuery.height * 0.012;
+    final locationHeight = mediaQuery.height * 0.013;
+
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       mainAxisAlignment: MainAxisAlignment.start,
@@ -29,22 +33,22 @@ class NameAndBreedTitleWidget extends StatelessWidget {
             ),
           ],
         ),
-        const SizedBox(height: 10),
+        SizedBox(height: breedHeight),
         Row(
           children: [
             const SizedBox(width: 5),
             Text(
               breed,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.black,
-                fontSize: 13,
+                fontSize: 13 * MediaQuery.of(context).textScaleFactor,
                 fontWeight: FontWeight.w500,
                 fontFamily: 'Inter',
               ),
             ),
           ],
         ),
-        const SizedBox(height: 8),
+        SizedBox(height: locationHeight),
         Row(
           children: [
             const Icon(
@@ -54,9 +58,9 @@ class NameAndBreedTitleWidget extends StatelessWidget {
             const SizedBox(width: 2),
             Text(
               distance,
-              style: const TextStyle(
+              style: TextStyle(
                 color: Colors.grey,
-                fontSize: 13,
+                fontSize: 13 * MediaQuery.of(context).textScaleFactor,
                 fontFamily: 'Inter',
                 fontWeight: FontWeight.w400,
               ),

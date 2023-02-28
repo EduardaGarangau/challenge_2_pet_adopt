@@ -10,16 +10,21 @@ class ImageAndCircleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final mediaQuery = MediaQuery.of(context).size;
+    final sizedAndContainerHeight = mediaQuery.height * 0.513;
+    final containerWidth = mediaQuery.width * 0.8;
+    final sizedWidth = mediaQuery.width * 0.76;
+
     return SizedBox(
-      height: 400,
-      width: 380,
+      height: sizedAndContainerHeight,
+      width: sizedWidth,
       child: Stack(
         children: [
           Positioned(
             left: 80,
             child: Container(
-              height: 400,
-              width: 400,
+              height: sizedAndContainerHeight,
+              width: containerWidth,
               decoration: BoxDecoration(
                 color: const Color.fromRGBO(254, 228, 107, 1),
                 borderRadius: BorderRadius.circular(200),
@@ -30,7 +35,7 @@ class ImageAndCircleWidget extends StatelessWidget {
             left: 130,
             child: Image.asset(
               imageWithoutBG,
-              height: 400,
+              height: sizedAndContainerHeight,
             ),
           ),
         ],
